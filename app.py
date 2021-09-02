@@ -61,6 +61,14 @@ for r in describe_response["SecurityGroupRules"]:
                         ],
                     },
                 ],
+                TagSpecifications=[
+                    {
+                        "ResourceType": "security-group-rule",
+                        "Tags": [
+                            {"Key": "home-ip", "Value": "true"},
+                        ],
+                    },
+                ],
             )
             print(f"Set {r['FromPort']} rule succesfully.")
 
